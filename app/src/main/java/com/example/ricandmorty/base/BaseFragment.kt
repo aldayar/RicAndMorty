@@ -1,4 +1,4 @@
-package com.example.ricandmorty.data
+package com.example.ricandmorty.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

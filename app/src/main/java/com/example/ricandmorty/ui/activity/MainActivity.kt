@@ -14,7 +14,9 @@ import com.example.ricandmorty.ui.fragmet.FragmentAdapter
 import com.example.ricandmorty.ui.fragmet.characterfrgagment.CharacterFragment
 import com.example.ricandmorty.ui.fragmet.episodefragment.EpisodeFragment
 import com.example.ricandmorty.ui.fragmet.locationfragment.LocationFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController

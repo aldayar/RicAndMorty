@@ -13,7 +13,9 @@ import com.example.ricandmorty.core.UIState
 import com.example.ricandmorty.databinding.FragmentCharacterBinding
 import com.example.ricandmorty.ui.fragmet.CharacterAdapter
 import com.example.ricandmorty.ui.fragmet.CharacterDiffCallback
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CharacterFragment : Fragment(), CharacterDiffCallback.OnClickListener {
     private var page: Int = 1
     private lateinit var binding: FragmentCharacterBinding

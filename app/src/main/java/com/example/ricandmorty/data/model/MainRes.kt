@@ -1,9 +1,12 @@
 package com.example.ricandmorty.data.model
 
+import androidx.annotation.Dimension
+import com.google.gson.annotations.SerializedName
 
-data class MainRes(
+
+data class MainRes<T>(
     val info:Info,
-    val results: List<Characters>
+    val results: List<T>
 )
 data class Info(
     val count:Int,
@@ -24,6 +27,15 @@ data class Origin(
     val url: String
 )
 data class Location(
+    val dimension: String,
+    val id: Int,
     val name: String,
+    val episode: String
+)
+data class Episodes(
+    val name: String,
+    val url: String,
+    @SerializedName("air_date")
+    val airDate: String,
     val episode: String
 )
