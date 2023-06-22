@@ -5,4 +5,5 @@
     <string name="tv_charcter_name">Name:</string>
     <string name="tv_charcter_gender">Gender:</string>
     <string name="tv_isAlive">Unknown</string>
+    <string name="tv_unknown">Unknown</string>
 </resources>

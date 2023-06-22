@@ -1,6 +1,7 @@
 package com.example.ricandmorty.ui.fragmet.characterfrgagment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,10 +54,11 @@ class CharacterFragment : Fragment(), CharacterDiffCallback.OnClickListener {
                     }
                 }
                 is UIState.Loading -> {
-                    Toast.makeText(requireContext(), "Loading...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Waiting for data", Toast.LENGTH_SHORT).show()
                 }
                 is UIState.Error -> {
-                    Toast.makeText(requireContext(), "Error occurred", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "Error 303, please try again", Toast.LENGTH_SHORT).show()
+                        Log.e(state.msg.toString(), "ololo", )
                 }
             }
         }

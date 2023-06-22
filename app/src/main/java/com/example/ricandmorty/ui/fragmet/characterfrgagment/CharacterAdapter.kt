@@ -12,8 +12,7 @@ import com.example.ricandmorty.R
 import com.example.ricandmorty.data.model.Characters
 import com.example.ricandmorty.databinding.ItemCharactersBinding
 
-class CharacterAdapter(val listener: CharacterDiffCallback.OnClickListener) :
-    ListAdapter<Characters, CharacterAdapter.CharacterViewHolder>(CharacterDiffCallback()) {
+class CharacterAdapter(val listener: CharacterDiffCallback.OnClickListener):ListAdapter<Characters, CharacterAdapter.CharacterViewHolder>(CharacterDiffCallback()) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -29,10 +28,8 @@ class CharacterAdapter(val listener: CharacterDiffCallback.OnClickListener) :
         ViewHolder(binding.root) {
         @SuppressLint("ResourceAsColor")
         fun onBind(model: Characters?, listener: CharacterDiffCallback.OnClickListener) {
-            itemView.setOnClickListener {
-                listener.
-                onClick(model!!.id)
-            }
+            itemView.setOnClickListener { listener.onClick(model!!.id)}
+
             binding.itemTvMain.text = model?.name
             Glide.with(binding.root).load(model?.image).centerCrop().into(binding.itemIgm)
             if (model?.gender == "Male") {
